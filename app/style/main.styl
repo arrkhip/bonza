@@ -1,15 +1,14 @@
-@import 'rupture'
-@import './mixins/mixin.styl'
-@import './fonts.styl'
+@import "rupture"
+@import "./mixins/mixin.styl"
+@import "./fonts.styl"
 
-/*
-Author: Name
-Name project: Name-p
-*/
+/*Author: Arkhipov Vladislav
+Author E-mail: arkhipovvladislav@mail.ru
+Name project: Bonza*/
 
 // Vars
 
-def-color = #fff
+def-color = #333
 def-font = sans-serif
 
 // Adaptive
@@ -18,12 +17,9 @@ flex-version = flex
 support-for-ie = false
 vendor-prefixes = official
 
-
 rupture.scale =       0    576px    768px    992px    1200px
-rupture.scale-names =  'xs'     'sm'     'md'     'lg'      'xl'
+rupture.scale-names =  "xs"     "sm"     "md"     "lg"      "xl"
 
-
-	
 *
 	padding 0
 	margin 0
@@ -43,9 +39,14 @@ html
 body
 	line-height 1.5
 	font-family def-font
-	color: def-color
+	color def-color
 	size 100%
-	//background-image resolve('1.jpg')
+	//background-image resolve(1.jpg)
+		
 
+// Buttons
+.btn
+	height 48px
+	width 300px
 	
 	

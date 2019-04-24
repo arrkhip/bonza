@@ -32,7 +32,7 @@ module.exports = {
 		"string-no-newline": true,
 		"unit-no-unknown": true,
 		"at-rule-empty-line-before": [
-			"never-multi-line",
+			"always",
 			{
 				"except": [
 					"blockless-after-same-name-blockless",
@@ -113,7 +113,7 @@ module.exports = {
 		"function-parentheses-newline-inside": "always-multi-line",
 		"function-parentheses-space-inside": "never-single-line",
 		"function-whitespace-after": "always",
-		"function-url-quotes": "never",
+		"function-url-quotes": "always",
 		"indentation": 2,
 		"length-zero-no-unit": true,
 		"max-empty-lines": 1,
