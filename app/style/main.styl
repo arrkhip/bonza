@@ -8,10 +8,11 @@ Name project: Bonza
 @import "./mixins/mixin.styl"
 @import "./fonts.styl"
 
-
-// 
-// ==== VARS
-// 
+/*
+ * ========================
+ * VARS
+ * ========================
+ */
 
 // fonts
 font-base 	= "Montserrat", sans-serif
@@ -24,6 +25,13 @@ orange 		 = #F79000
 grey 			 = #292929
 grey-light = #343434
 
+
+/*
+ * ========================
+ * BASE 
+ * ========================
+ */
+ 
 // Adaptive
 flex-version = flex
 support-for-ie = false
@@ -54,9 +62,15 @@ body
 	font-family font-base
 	color grey
 	size 100%
-	//background-image resolve(1.jpg)
+
+p 
+	line-height 26px
+	
+	+below(lg)
+		line-height 1.3em
 		
-// Grid
+		
+/* container */
 .wrap
 	width 100%
 	max-width 1200px
@@ -65,7 +79,7 @@ body
 	margin 0 auto
 	padding: 0 15px
 	
-// Buttons
+/* Buttons*/
 .btn
 	display inline-flex
 	justify-content center
@@ -94,10 +108,7 @@ body
 	border 2px solid orange
 	
 
-//
-// === TYPOGRAPHY
-//
-
+/* Typography */
 .h2 
 	font 600 36px/44px font-base
 	color grey-light
@@ -107,10 +118,7 @@ body
 	color white
 	
 
-//
-// === FORM ELEMENTS
-//
-
+/* Form elements*/
 .input
 	display inline-block
 	width 100%
@@ -126,9 +134,11 @@ body
 	+placeholder()
 		color white
 		
-// 
-// === PROMO
-//
+/*
+ * ========================
+ * PROMO
+ * ========================
+ */
 .promo 
 	padding-top 212px
 	padding-bottom 267px
@@ -207,4 +217,77 @@ body
 			span
 				font-size 26px
 
+
+/*
+ * ========================
+ * ABOUT
+ * ========================
+ */
+.about
+	padding-top 81px
+	padding-bottom 83px
 	
+	&-headline
+		margin-bottom 65px
+	
+		p
+			margin-top 27px
+			
+	&-list
+		display flex 
+		flex-wrap wrap
+		align-items flex-start
+		margin 0 -15px
+		
+	&-item
+		display flex 
+		align-items flex-start
+		width 33%
+		margin-bottom 53px
+		padding 0 15px
+	
+	&-icon
+		flex-shrink 0
+		width 70px
+		height 70px
+		fill orange
+	
+	&-text
+		vertical-align top
+		padding-left 30px
+		
+	+below(lg)
+		&-icon
+			width 55px
+			height 55px
+			
+		&-text
+			padding-left 20px
+			
+	+below(md)
+		&-icon
+			width 45px
+			height 45px
+			
+		&-text
+			font-size 14px
+			
+	+below(sm)
+		&-item
+			width 50%
+						
+	+below(480px)
+		&-item
+			width 100%
+			margin-bottom 40px
+			
+		&-icon
+			width 51px
+			height 51px
+		
+		&-text
+			padding-left 11px
+			font-size 16px
+			line-height 20px
+
+			
