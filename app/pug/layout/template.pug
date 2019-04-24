@@ -1,0 +1,44 @@
+block vars
+	- var title = "Name project"
+	- var author = "Name Author"
+	
+doctype html
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		base(href="/")
+		title= title
+		meta(name="keywords", content="")
+		meta(name="description", content="")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+		meta(name='robots', content='all')
+		meta(name="author", content="Программирование и верстка: alex.webdojo@gmail.com, Дизайн: Name")
+
+		meta(name="application-name", content="[имя приложения]")
+
+		meta(name="theme-color", content="#ffffff")
+		meta(name="msapplication-TileColor", content="#ffffff")
+
+		meta(property="og:url", content="[ссылка]")
+		meta(property="og:type", content="article")
+		meta(property="og:title", content="[заголовок]")
+		meta(property="og:description", content="[описание]")
+		meta(property="og:image", content="[ссылка на изображение]")
+		meta(property="og:site_name", content="[название сайта]")
+		meta(property="article:published_time", content="2014-08-12T00:01:56+00:00")
+
+		block links
+		link(rel="shortcut icon" href="./img/favicon.ico")
+		
+		link(rel="stylesheet", href="./css/vendor.min.css")
+		link(rel="stylesheet", href="./css/main.min.css")
+	body
+		header
+
+		main
+			block content
+
+		footer
+		script(src="./js/vendor.min.js")
+		script(src="./js/main.min.js")

@@ -1,0 +1,51 @@
+@import 'rupture'
+@import './mixins/mixin.styl'
+@import './fonts.styl'
+
+/*
+Author: Name
+Name project: Name-p
+*/
+
+// Vars
+
+def-color = #fff
+def-font = sans-serif
+
+// Adaptive
+
+flex-version = flex
+support-for-ie = false
+vendor-prefixes = official
+
+
+rupture.scale =       0    576px    768px    992px    1200px
+rupture.scale-names =  'xs'     'sm'     'md'     'lg'      'xl'
+
+
+	
+*
+	padding 0
+	margin 0
+	box-sizing: border-box
+	&::after
+		padding 0
+		margin 0
+		box-sizing: border-box
+	&::before
+		padding 0
+		margin 0
+		box-sizing: border-box
+
+html
+	font-size 16px
+
+body
+	line-height 1.5
+	font-family def-font
+	color: def-color
+	size 100%
+	//background-image resolve('1.jpg')
+
+	
+	
