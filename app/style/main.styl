@@ -62,6 +62,7 @@ body
 	font-family font-base
 	color grey
 	size 100%
+	overflow-x hidden
 
 p 
 	line-height 26px
@@ -224,8 +225,19 @@ p
  * ========================
  */
 .about
+	position relative
 	padding-top 81px
 	padding-bottom 83px
+	
+	&-decor
+		position absolute
+		top 0
+		right 45px
+		width 425px
+		height 404px
+		fill orange
+		opacity .08
+		transform rotate(30deg)
 	
 	&-headline
 		margin-bottom 65px
@@ -253,18 +265,24 @@ p
 		fill orange
 	
 	&-text
-		vertical-align top
 		padding-left 30px
+		font-size 18px
+		
 		
 	+below(lg)
+
 		&-icon
 			width 55px
 			height 55px
 			
 		&-text
 			padding-left 20px
+			font-size 16px
 			
 	+below(md)
+		&-decor
+			display none
+
 		&-icon
 			width 45px
 			height 45px
