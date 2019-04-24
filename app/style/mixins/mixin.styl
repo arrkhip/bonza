@@ -1,7 +1,7 @@
 font-url(file)
   return "../fonts/" + file
 
-webfont(family, file, hack-chrome-windows = false, weight = 400)
+webfont(family, file, weight = 400, hack-chrome-windows = false)
   @font-face
     font-family family
     src url(font-url(file + ".eot"))

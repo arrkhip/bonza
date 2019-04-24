@@ -2,14 +2,21 @@
 @import "./mixins/mixin.styl"
 @import "./fonts.styl"
 
-/*Author: Arkhipov Vladislav
+/*
+Author: Arkhipov Vladislav
 Author E-mail: arkhipovvladislav@mail.ru
-Name project: Bonza*/
+Name project: Bonza
+*/
 
-// Vars
+// ==== VARS
 
+// color
 def-color = #333
-def-font = sans-serif
+
+// fonts
+font-base = 	"Montserrat", sans-serif
+font-second = "Muller", sans-serif
+font-third = 	"Muller", sans-serif
 
 // Adaptive
 
@@ -23,7 +30,7 @@ rupture.scale-names =  "xs"     "sm"     "md"     "lg"      "xl"
 *
 	padding 0
 	margin 0
-	box-sizing: border-box
+	box-sizing border-box
 	&::after
 		padding 0
 		margin 0
@@ -37,8 +44,9 @@ html
 	font-size 16px
 
 body
+	font-weight 400
 	line-height 1.5
-	font-family def-font
+	font-family font-base
 	color def-color
 	size 100%
 	//background-image resolve(1.jpg)

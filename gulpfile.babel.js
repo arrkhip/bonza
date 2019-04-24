@@ -16,8 +16,6 @@ import assets from "postcss-assets"
 
 import pug from "gulp-pug"
 
-import stylelint from "stylelint"
-import stylelintConfig from "./stylelint.config"
 import reporter from "postcss-browser-reporter"
 
 import terser from "gulp-terser"
@@ -112,7 +110,6 @@ export function html() {
 export function styles() {
 
     let postCSSPlugins = [
-        stylelint(stylelintConfig),
         short(),
         autoprefixer({
             browsers: ['last 4 version']
