@@ -29,7 +29,7 @@ flex-version = flex
 support-for-ie = false
 vendor-prefixes = official
 
-rupture.scale =       0    576px    768px    992px    1200px
+rupture.scale =       	0    576px    768px    992px    1200px
 rupture.scale-names =  "xs"     "sm"     "md"     "lg"      "xl"
 
 *
@@ -56,7 +56,15 @@ body
 	size 100%
 	//background-image resolve(1.jpg)
 		
-
+// Grid
+.wrap
+	width 100%
+	max-width 1200px
+	min-width 320px
+	height 100%
+	margin 0 auto
+	padding: 0 15px
+	
 // Buttons
 .btn
 	display inline-flex
@@ -117,6 +125,86 @@ body
 	outline none
 	+placeholder()
 		color white
+		
+// 
+// === PROMO
+//
+.promo 
+	padding-top 212px
+	padding-bottom 267px
+	background resolve("promo-bg.jpg") no-repeat center / cover
 	
+	&-title
+		margin-bottom 50px
+		font 400 40px/54px font-second
+		color white
+		
+		span 
+			display block
+			font-weight 700
+			font-size 54px
+			
+	.btn-border
+		display flex
+		margin-top 18px
+		color white
+		border-color white
 	
+	+below(lg)
+		padding-top 150px
+		padding-bottom 170px
+		
+		&-info
+			padding-left 40px
+		
+		&-title
+			font-size 30px
+			line-height 40px
+			
+			span 
+				font-size 40px
+				
+	+below(md)
+		padding-top 100px
+		padding-bottom 110px
+		
+		&-title
+			font-size 26px
+			line-height 34px
+			
+			span 
+				font-size 34px
+				
+	+below(sm)
+		&-info
+			padding-left 0
+			
+		&-title
+			margin-bottom 30px
+			font-size 22px
+			line-height 30px
+			
+			span
+				font-size 30px
+				
+	+below(480px)
+		height 490px
+		padding-top 40px
+		padding-bottom 26px
+		background-image resolve("promo-bg-mobile.jpg")
+		
+		&-info
+			display flex 
+			flex-direction column
+			justify-content space-between
+			height 100%
+			
+		&-title
+			margin-bottom 0
+			font-size 20px
+			line-height 26px
+			
+			span
+				font-size 26px
+
 	
