@@ -42,7 +42,6 @@ const path = {
     },
     libs: {
         css: [
-            "./app/libs/bootstrap4/dist/css/bootstrap-grid.min.css",
             "./app/libs/normalize.css/normalize.css",
             "./app/libs/fancybox/dist/jquery.fancybox.min.css",
             "./app/libs/swiper/dist/css/swiper.min.css"

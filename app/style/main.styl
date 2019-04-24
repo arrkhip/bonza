@@ -1,25 +1,30 @@
-@import "rupture"
-@import "./mixins/mixin.styl"
-@import "./fonts.styl"
-
 /*
 Author: Arkhipov Vladislav
 Author E-mail: arkhipovvladislav@mail.ru
 Name project: Bonza
 */
 
-// ==== VARS
+@import "rupture"
+@import "./mixins/mixin.styl"
+@import "./fonts.styl"
 
-// color
-def-color = #333
+
+// 
+// ==== VARS
+// 
 
 // fonts
-font-base = 	"Montserrat", sans-serif
+font-base 	= "Montserrat", sans-serif
 font-second = "Muller", sans-serif
-font-third = 	"Muller", sans-serif
+font-third 	= "OpenSans", sans-serif
+
+// color 
+white      = #ffffff
+orange 		 = #F79000
+grey 			 = #292929
+grey-light = #343434
 
 // Adaptive
-
 flex-version = flex
 support-for-ie = false
 vendor-prefixes = official
@@ -47,14 +52,51 @@ body
 	font-weight 400
 	line-height 1.5
 	font-family font-base
-	color def-color
+	color grey
 	size 100%
 	//background-image resolve(1.jpg)
 		
 
 // Buttons
 .btn
+	display inline-flex
+	justify-content center
+	align-items center
+	width 100%
+	max-width 270px
 	height 48px
-	width 300px
+	font 500 16px/1 font-second 
+	background-color transparent
+	border none
+	border-radius 50px
+	transition()
+	
+	&:hover
+		opacity .8
+		cursor pointer
+	
+.btn-orange
+	@extend .btn
+	color white
+	background-color orange
+	
+.btn-border
+	@extend .btn
+	color #474747
+	border 2px solid orange
+	
+
+//
+// === TYPOGRAPHY
+//
+
+.h2 
+	font 600 36px/44px font-base
+	color grey-light
+	
+.h2-white
+	@extend .h2
+	color white
+	
 	
 	
