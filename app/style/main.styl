@@ -799,3 +799,87 @@ img
 	+below(xs)
 		padding-top 40px
 		padding-bottom 55px
+		
+
+/*
+ * ========================
+ * FAQ
+ * ========================
+ */	
+.faq
+	padding-top 100px
+	padding-bottom 95px
+	
+	+below(md)
+		padding 80px 0
+		
+	+below(md)
+		padding 60px 0
+		
+	+below(xs)
+		padding 48px 0
+	
+.accordion
+	padding-top 40px
+	
+	&-item
+		
+		&:not(:last-child)
+			margin-bottom 20px
+	
+	&-head
+		display flex 
+		justify-content space-between
+		align-items flex-start
+		padding 20px 25px
+		border-radius 10px
+		background-color #f5f5f5
+		
+		&:hover
+			cursor pointer
+	
+	&-title
+		width calc(100% - 30px)
+		font 500 18px/26px font-base
+		
+	&-icon
+		size 16px
+		margin-top 5px
+		fill orange
+		transition()
+		
+		&.active
+			transform rotate(180deg)
+			
+	&-body
+		display none
+		padding 50px 25px
+		margin-top -10px
+		border 1px solid #f5f5f5
+		border-top none
+		border-radius 10px
+	
+		p:not(:last-child)
+			margin-bottom 30px
+			
+	+below(sm)
+
+		&-item:not(:last-child)
+			margin-bottom 10px
+			
+		&-title
+			font-size 14px
+			line-height 18px
+			
+		&-body
+			display none
+			padding 30px 10px
+		
+			p
+				font-size 14px
+				line-height 20px
+				
+				&:not(:last-child)
+					margin-bottom 20px
+		
+		
