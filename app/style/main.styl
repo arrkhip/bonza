@@ -70,6 +70,10 @@ p
 	+below(lg)
 		line-height 1.3em
 		
+a 
+	color inherit
+	text-decoration none
+		
 		
 /* container */
 .wrap
@@ -114,9 +118,26 @@ p
 	font 600 36px/44px font-base
 	color grey-light
 	
+	+below(lg)
+		font-size 28px
+		line-height 36px
+	
+	+below(sm)
+		font-size 24px
+		line-height 29px
+	
 .h2-white
 	@extend .h2
 	color white
+	
+
+.h3
+	font 500 24px/29px font-second
+	color #202020
+	
+	+below(lg)
+		font-size 20px
+		line-height 24px
 	
 
 /* Form elements*/
@@ -308,4 +329,151 @@ p
 			font-size 16px
 			line-height 20px
 
+
+/*
+ * ========================
+ * SERVICES
+ * ========================
+ */
+.services
+	
+	&-list
+		display flex
+		flex-wrap wrap 
+		margin 0 -15px
+		padding-top 30px
 			
+	&-item-lg,
+	&-item	
+		position relative
+		margin 0 15px 40px
+		background-color #f5f5f5
+		overflow hidden
+		transition(.45s)
+		
+		.h3,
+		.h3 span,
+		p
+			transition(.45s)
+	
+		&:hover
+			background-color #f89c1d
+			
+			.h3,
+			.h3 span,
+			p
+				color white
+				
+			.services-icon
+				opacity 0
+				transform translateY(20px)
+				
+			.services-order
+				opacity 1
+				transform translateY(0)
+
+	&-item-lg
+		width calc(50% - 30px)
+		height 350px
+		padding-top 22px
+		padding-left 20px
+		background-repeat no-repeat
+		background-position bottom right
+		
+	&-item
+		display flex 
+		flex-direction column
+		justify-content space-between
+		width calc(25% - 30px)
+		min-height 170px
+		padding 16px 20px 22px
+		
+		.h3 span
+			font: 400 20px/1 font-third
+			color #2b2b2b 
+
+	&-headline p 
+		font 400 18px/24px font-third
+		color #202020
+	
+	&-icon
+		width 67px
+		height 67px
+		fill #f89c1d
+		transition(.45s)
+		
+	&-order
+		position absolute
+		left 20px
+		bottom 55px
+		font-weight 500
+		font-size: 22px
+		text-decoration underline
+		color white
+		opacity 0
+		transition(.45s)
+		transform translateY(40px)
+		
+		&:hover
+			text-decoration none
+	
+	+below(lg)
+		.h3 span 
+			font-size 16px
+		
+	+below(md)
+		&-headline p 
+			font-size 14px
+			
+		.h3
+			font-size 16px
+			line-height 20px
+			
+			span 
+				font-size 14px
+				
+		&-list
+			margin 0 -6px
+		
+		&-item-lg,
+		&-item 
+			margin 0 6px 30px
+			
+		&-item-lg 
+			width calc(50% - 12px)
+			height 280px
+			background-size 330px
+		
+		&-item 
+			width calc(25% - 12px)
+			
+		&-order
+			font-size 18px
+			
+	+below(sm)
+		
+		&-item 
+			width calc(50% - 12px)
+			
+	+below(xs)
+		
+		&-item-lg
+			width 100%
+			height 295px
+			background-size 320px 210px
+			background-position-x right
+			
+	+below(400px)
+		.h3 
+			font-size 24px
+			line-height 29px
+			
+		&-list
+			margin 0 -15px
+			
+		&-item,
+		&-item-lg
+			margin 0 0 20px
+			
+		&-item 
+			width 100%
