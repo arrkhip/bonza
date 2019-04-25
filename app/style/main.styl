@@ -883,3 +883,118 @@ img
 					margin-bottom 20px
 		
 		
+
+
+/*
+ * ========================
+ * CONTACTS
+ * ========================
+ */	
+.contacts
+	padding-top 56px
+	// box-shadow 0px -3px 50px rgba(0, 0, 0, 0.16)
+	
+	&-inner
+		display flex
+		justify-content space-between
+		align-items flex-start
+	
+	&-phone
+		display flex 
+		align-items flex-start
+		padding-top 45px
+	
+		&-icon
+			size 20px
+			margin-top 5px
+			margin-right 15px
+			fill orange
+			
+		&-box a 
+			display block
+			font-weight 500
+			font-size 18px
+			line-height 26px
+			transition()
+			
+			&:hover
+				color orange
+	
+	&-location
+		display flex 
+		align-items flex-start
+		padding-top 35px
+		
+		&-icon
+			width 17px
+			height 24px
+			margin-right 15px
+			fill orange
+			stroke-width 1px
+			stroke orange
+	
+		&-text 
+			font-weight 500
+			font-size 16px
+			
+	&-social
+		display flex 
+		align-items center
+		padding-top 37px
+		
+		a
+			transition()
+			
+			&:hover
+				opacity .8
+				
+			&:not(:last-child)
+				margin-right 20px
+	
+	&-instagram
+		size 22px
+		fill orange
+	
+	&-vkontakte
+		width 30px
+		height 17px
+		fill orange
+	
+	&-place
+		display flex 
+		align-items stretch
+		width calc(100% - 300px)
+	
+	&-banner
+		width 100%
+		max-width 267px
+		margin-right 31px
+	
+	&-map
+		width 100%
+		max-width 569px
+		height 299px
+		
+	+below(md)
+		&-banner
+			display none
+			
+		&-map 
+			max-width: 100%
+			
+	+below(sm)
+		&-place 
+			width calc(100% - 230px)
+			
+	+below(xs)
+		&-inner
+			flex-direction column
+			
+		&-place
+			width 100%
+			// margin 0 -15px
+			
+		&-map
+			width 100%
+			margin-top 30px
+			// margin 30px -15px 0
