@@ -336,6 +336,7 @@ a
  * ========================
  */
 .services
+	margin-bottom 84px
 	
 	&-list
 		display flex
@@ -477,3 +478,81 @@ a
 			
 		&-item 
 			width 100%
+			
+
+/*
+ * ========================
+ * SELL
+ * ========================
+ */
+.sell
+	padding 38px 0
+	background-color #1f1f1f
+	
+	&-headline
+		display flex 
+		align-items center
+		
+	&-icon
+		size 40px
+		margin-left 15px
+		fill #f99500
+	
+	&-list
+		display flex 
+		align-items flex-start
+		margin 0 -10px
+		padding-top 50px
+	
+	&-item
+		display flex
+		align-items flex-start
+		width 33%	
+		padding 0 10px
+		color white
+	
+	&-number
+		font 900 81px/1 font-second
+		color orange
+		
+	&-text
+		padding-left 30px
+		font-weight 500
+		font-size 18px
+		color white
+		
+	+below(lg)
+		&-text 
+			padding-left 18px
+			
+	+below(md)
+		&-text 
+			font-size 16px
+		
+		&-number
+			font-size 60px
+			
+	+below(sm)
+		padding-top 45px
+		padding-bottom 30px
+		
+		&-list 
+			flex-wrap wrap 
+		
+		&-item 
+			width 50%
+			margin-bottom 15px
+			
+	+below(xs)
+		&-list 
+			padding-top 30px
+			
+		&-item
+			width 100%
+			
+	+below(400px)
+		&-number
+			font-size 40px
+			
+		&-text 
+			font-size 14px
