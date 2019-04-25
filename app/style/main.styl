@@ -728,3 +728,74 @@ img
 			p 
 				font-size 16px
 				line-height 26px
+				
+
+/*
+ * ========================
+ * PLUS
+ * ========================
+ */	
+.plus
+	padding-top 176px
+	padding-bottom 100px
+	background resolve("plus-bg.jpg") no-repeat center top / cover
+	
+	&-inner
+		display flex 
+		align-items center
+	
+	&-info
+		flex-shrink 2
+		width 100%
+		max-width 625px
+		margin-right 88px
+	
+	&-list
+		padding-top 45px
+	
+	&-item
+		display flex 
+		align-items flex-start
+		
+		&:not(:last-child)
+			margin-bottom 25px
+	
+	&-icon
+		width 30px
+		height 27px
+		background resolve("check.png") no-repeat center
+		
+	span 
+		width calc(100% - 45px)
+		padding-left 15px
+		font-weight 600
+		font-size 14px
+		color white
+	
+	&-action
+		flex-shrink 1
+	
+		.btn-orange 
+			max-width 346px
+			margin-top 35px
+			
+	+below(md)
+		&-info
+			margin-right 25px			
+			
+	+below(sm)
+		padding 60px 0
+		background-image none
+		background-color #1f1f1f
+		
+		&-inner
+			flex-direction column
+			align-items flex-start
+			
+		&-info
+			margin-right 0
+			margin-bottom 45px
+			
+	+below(xs)
+		padding-top 40px
+		padding-bottom 55px
