@@ -1,0 +1,71 @@
+/*
+ * ========================
+ * FOOTER
+ * ========================
+ */
+.footer
+	margin-top 25px
+	padding-top 21px
+	padding-bottom 28px
+	background-color #262626
+
+	&-inner
+		display flex
+		justify-content space-between
+		align-items center
+
+	&-logo
+		width 100%
+		max-width 213px
+		height 71px
+		fill white
+
+	&-location
+		display inline-flex
+		align-items center
+		
+		&-icon
+			width 17px
+			height 24px
+			margin-right 10px
+			fill orange
+		
+		&-text
+			font-weight 400
+			font-size 16px
+			color white
+
+	&-phone
+		display inline-flex
+		align-items center
+		
+		&-icon
+			width 20px
+			height 20px
+			margin-right 7px
+			fill orange
+			
+		&-text
+			font-weight 500
+			font-size 18px
+			color white
+			transition()
+			
+			&:hover
+				color orange
+			
+			&:not(:last-child)
+				margin-right 80px
+		
+	&-author 
+		&-text 
+			margin-bottom 8px
+			font-weight 500
+			font-size 18px
+			color white
+			
+		&-link
+			transition()
+			
+			&:hover
+				opacity .8

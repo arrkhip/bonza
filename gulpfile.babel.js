@@ -36,7 +36,10 @@ const path = {
         html: "./app/pug/pages/**/*.pug",
         css: "./app/style/main.styl",
         js: "./app/js/common.js",
-        img: "./app/img/**/*.+(jpg|jpeg|png|gif|ico)",
+        img: [
+            "./app/img/**/*.+(jpg|jpeg|png|gif|ico|svg)",
+            "!./app/img/svg/**/*.svg"
+        ],
         svg: "./app/img/svg/*.svg",
         fonts: "./app/fonts/**/*.+(ttf|eot|woff|svg)"
     },
