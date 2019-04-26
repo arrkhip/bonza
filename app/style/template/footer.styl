@@ -53,9 +53,6 @@
 			
 			&:hover
 				color orange
-			
-			&:not(:last-child)
-				margin-right 80px
 		
 	&-author 
 		&-text 
@@ -69,3 +66,38 @@
 			
 			&:hover
 				opacity .8
+				
+	+below(md)
+		position relative
+		
+		&-inner
+			flex-direction column
+			align-items flex-start
+			
+		&-location
+			margin-top 25px
+			
+		&-phone
+			margin-top 10px
+			
+			&:not(.icon)
+				margin-left 27px
+
+		&-author
+			position absolute
+			bottom 20px
+			right 15px
+
+	+below(480px)
+		padding-top 28px
+		padding-bottom 35px
+	
+		&-location
+			margin-top 30px
+			
+		&-phone
+			margin-top 20px
+		
+		&-author
+			position static
+			margin-top 35px
