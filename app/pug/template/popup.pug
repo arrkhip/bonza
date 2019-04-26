@@ -1,0 +1,12 @@
+mixin popup(idModal, title)
+	.popup(id= idModal)
+		.popup-inner
+			h2.h2= title
+			form.popup-form
+				input.input(type="text", name="name", placeholder="Имя")
+				input.input(type="text", name="phone", placeholder="Телефон")
+				button.btn-orange Отправить заявку
+			p.popup-info 
+				| Нажимая кнопку отправить вы соглашаетесь с условиями 
+				a(href="#") политики конфиденциальностии
+				|  обработки персональных данных

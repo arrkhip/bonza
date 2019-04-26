@@ -40,6 +40,11 @@ html(lang="ru")
 			block content
 
 		include ../template/footer
+		include ../template/popup
+
+		+popup('popup-sale', 'Продать авто')
+		+popup('popup-buy', 'Купить авто')
+		// +popup('popup-callback', 'Заказать звонок')
 
 		script(src="./js/vendor.min.js")
 		script(src="https://api-maps.yandex.ru/2.1/?&lang=ru_RU", type="text/javascript")

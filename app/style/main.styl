@@ -101,6 +101,7 @@ img
 	background-color transparent
 	border none
 	border-radius 50px
+	outline none
 	transition()
 	
 	&:hover
@@ -148,7 +149,7 @@ img
 	font 500 20px/24px font-base
 	color #2d2d2d
 
-/* Form elements*/
+/* Form elements */
 .input
 	display inline-block
 	width 100%
@@ -163,6 +164,22 @@ img
 	outline none
 	+placeholder()
 		color white
+		
+/* Fancybox*/
+.fancybox-slide--html
+	padding 0
+	
+	.fancybox-close-small
+		padding 0
+		color orange
+	
+	+below(576px)
+		padding-left 0
+		padding-right 0
+		
+// .fancybox-button svg
+// 	fill orange 
+	
 		
 /*
  * ========================
@@ -1086,10 +1103,8 @@ img
 	.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b
 		transform rotate(135deg)
 		
-
 	+below(md)
 		background-position-x 30%
-	
 
 	+below(xs)
 		padding-top 50px
@@ -1113,3 +1128,4 @@ img
  
 
 @import "./template/footer.styl"
+@import "./template/popup.styl"
