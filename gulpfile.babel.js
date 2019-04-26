@@ -47,12 +47,14 @@ const path = {
         css: [
             "./app/libs/normalize.css/normalize.css",
             "./app/libs/fancybox/dist/jquery.fancybox.min.css",
-            "./app/libs/swiper/dist/css/swiper.min.css"
+            "./app/libs/swiper/dist/css/swiper.min.css",
+            "./app/libs/select2/dist/css/select2.min.css"
         ],
         js: [
             "./app/libs/jquery/dist/jquery.min.js",
             "./app/libs/fancybox/dist/jquery.fancybox.min.js",
             "./app/libs/swiper/dist/js/swiper.min.js",
+            "./app/libs/select2/dist/js/select2.min.js",
             "./app/libs/svg4everybody/dist/svg4everybody.min.js"
         ]
     },

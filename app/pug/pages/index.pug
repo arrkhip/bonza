@@ -136,7 +136,51 @@ block content
 					.purchase-banner
 						img(src="img/ban-on-reg.jpg", alt="С запретом на рег. действия")
 					h3.h3 С запретом на рег. действия
+	
+	section.buyout
+		.wrap
+			.buyout-inner
+				svg.buyout-decor
+					use(xlink:href="img/sprite.svg#bonza-icon")
+				h2.h2-white Рассчитать стоимость вашего авто
+				form.buyout-form
+					select.js-select.buyout-select(name="brand")
+						option Марка:
+						option Alfa Romeo
+						option Aston Martin
+						option Audi
+						option Bentley
+						option BMW
+						option Bugatti
+						option Buick
 
+					input.input(type="text", name="name", placeholder="Ваше имя")
+					
+					select.js-select.buyout-select(name="models")
+						option Модель:
+						option I3
+						option I8
+						option M3
+						option M8
+						option X5
+						option X6
+
+					input.input(type="text", name="phone", placeholder="Телефон")
+					
+					select.js-select.buyout-select(name="models")
+						option Год:
+						option 2010
+						option 2011
+						option 2012
+						option 2013
+						option 2014
+						option 2015
+						option 2016
+						option 2017
+						option 2018
+						option 2019
+
+					button.btn-orange Узнать стоимость
 	section.redeemed
 		.wrap
 			h2.h2 Выкупленные автомобили
