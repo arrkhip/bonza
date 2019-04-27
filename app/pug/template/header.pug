@@ -1,0 +1,38 @@
+header.header
+	.wrap
+		.header-inner
+			a.header-logo-mobile(href="#")
+				img(src="img/logo.svg", alt="Bonza logo")
+			.header-mobile-wrapper
+				.header-container
+					a.header-logo(href="#")
+						img(src="img/logo.svg", alt="Bonza logo")
+					.header-location
+						svg.header-location-icon
+							use(xlink:href="img/sprite.svg#location")
+						span.header-location-text Верхнеторговая, 4
+					.header-social
+						a(href="#", target="_blank")
+							svg.header-social-in
+								use(xlink:href="img/sprite.svg#instagram")
+						a(href="#", target="_blank")
+							svg.header-social-vk
+								use(xlink:href="img/sprite.svg#vkontakte")
+					a.header-phone(href="tel: +7 937 320 92 43") +7 937 320 92 43
+					button.btn-border(data-fancybox, data-src="#popup-callback") Заказать звонок
+					nav.header-nav
+						-var menu = {'about' : 'О компании', 'services' : 'Услуги', 'sell' : 'Продать авто', 'buyout' : 'Расчёт стоимости', 'credit' : 'Автокредит', '' : 'Каталог', 'faq' : 'Вопросы и ответы', 'contacts' : 'Контакты'}
+						ul.header-nav-list
+							each value, key in menu
+								li.header-nav-item
+									a.header-nav-link(href= "#" + key) #{value}
+			button.header-callback(data-fancybox, data-src="#popup-callback") 
+				svg.header-callback-icon
+					use(xlink:href="img/sprite.svg#phone")
+				span.header-callback-text Звонок
+			.js-header-switch.header-switch
+				svg.header-switch-icon
+					use(xlink:href="img/sprite.svg#menu")
+				svg.header-switch-icon(hidden)
+					use(xlink:href="img/sprite.svg#close")
+				span.header-switch-text Меню

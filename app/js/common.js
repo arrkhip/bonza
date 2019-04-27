@@ -2,6 +2,12 @@
 
   svg4everybody();
 
+  // header
+  $('.js-header-switch').on('click', function() {
+    $('.header-mobile-wrapper').slideToggle(350);
+    $('.header-switch-icon').toggle();
+  });
+
   // slider 
   var swiper = new Swiper('.redeemed-slider', {
     slidesPerView: 3,

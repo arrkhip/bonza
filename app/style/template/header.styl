@@ -1,0 +1,226 @@
+.header
+	position fixed
+	top 0
+	left 0
+	z-index 10
+	width 100%
+	padding-top 12px
+	background-color white
+	
+	&::after
+		position absolute
+		top 102px
+		left 0
+		width 100%
+		height 1px
+		background-color rgba(112, 112, 112, .2)
+		content ""
+		
+	& + main
+		margin-top 176px
+	
+	&-inner,
+	&-container
+		display flex
+		flex-wrap wrap	
+		align-items center
+		
+	&-logo
+		margin-right auto
+		transition()
+		
+		&:hover
+			opacity .8
+			
+		&-mobile
+			display none
+	
+	&-location
+		display inline-flex
+		align-items center
+		margin-right 30px
+		
+		&-icon
+			width 17px
+			height 24px
+			margin-right 10px
+			fill orange
+			stroke orange
+			stroke-width 1px
+			
+		&-text
+			font-size 15px
+			
+	&-social
+		display inline-flex
+		align-items center
+		margin-right 119px
+		margin-right auto
+		
+		a:not(:last-child)
+			margin-right 20px
+		
+		&-in,
+		&-vk
+			fill orange
+			transition()
+			
+			&:hover
+				opacity .8
+	
+		&-in
+			size 24px
+		
+		&-vk
+			width 37px
+			height 21px
+	
+	&-phone
+		margin-right 40px
+		font-weight 600
+		font-size 18px
+		transition()
+		
+		&:hover
+			color orange
+	
+	.btn-border
+		color #474747
+	
+	&-nav
+		width 100%
+		margin-top 18px
+	
+		&-list
+			display flex 
+			justify-content space-between
+			align-items flex-start
+			padding 25px 0
+		
+		&-link
+			position relative
+			padding-bottom 2px
+			font-size 14px
+			transition(.4s)
+			
+			&::after
+				position absolute
+				left 0
+				bottom 0
+				width 100%
+				height 1px
+				background-color orange
+				content ""
+				transform scaleX(0)
+				transition()
+			
+			&.active
+				color orange
+				text-shadow .5px 0 0 orange
+				
+			&:not(.active):hover::after
+				transform scaleX(1)
+	
+	
+	&-callback,
+	&-switch
+		display none
+		flex-direction column
+		align-items center
+		
+		&:hover
+			cursor pointer
+		
+		&-icon
+			margin-bottom 8px
+			size 20px
+			fill orange
+		
+		&-text
+			font 400 12px/1 font-third
+			leter-spacing .12px
+			color #3d3d3d
+			
+	&-callback
+		margin-right 28px
+		background-color transparent
+		border none
+		outline none
+		
+	+below(1100px)
+		.btn-border
+			max-width 200px		
+			
+	+below(md)
+		padding-top 0
+		height 60px
+		border-bottom 1px solid rgba(112, 112, 112, .2)
+		
+		&::after,
+		&-container,
+		&-logo,
+		.btn-border
+			display none
+			
+		&-inner
+			height 100%
+			
+		&-mobile-wrapper
+			position fixed
+			top 60px
+			left 0
+			display none
+			width 100%
+			height 100%
+			overflow-y auto
+			
+		&-container
+			display flex
+			flex-direction column
+			align-items flex-start
+			padding 35px 15px 110px
+			background-color #2b2b2b
+			
+		&-logo-mobile
+			display block
+			max-width 123px
+			margin-right auto
+			
+		&-callback,
+		&-switch
+			display inline-flex
+			
+		&-nav
+			order -2
+			margin-top 0
+			margin-bottom 15px
+			
+			&-list
+				flex-wrap wrap
+				padding 0
+				
+			&-item
+				width 50%
+				margin-bottom 30px
+				
+			&-link
+				color white
+				
+		&-phone
+			order -1
+			margin-bottom 30px
+			color white
+			
+		&-location
+			margin-bottom 30px
+			
+			&-text
+				color white
+				
+	+below(xs)
+		&-nav-item
+			width 100%
+				
+			
+			
+			
