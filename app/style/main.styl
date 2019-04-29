@@ -276,7 +276,7 @@ img
 .about
 	position relative
 	padding-top 81px
-	padding-bottom 83px
+	padding-bottom 30px
 	
 	&-decor
 		position absolute
@@ -289,10 +289,10 @@ img
 		transform rotate(30deg)
 	
 	&-headline
-		margin-bottom 65px
+		margin-bottom 55px
 	
 		p
-			margin-top 27px
+			margin-top 15px
 			
 	&-list
 		display flex 
@@ -651,6 +651,7 @@ img
  * ========================
  */		
 .redeemed
+	padding-top 100px
 	padding-bottom 90px
 	
 	.wrap 
@@ -707,6 +708,9 @@ img
 		&-price
 			font 500 24px/29px font-second
 			color grey-light
+			
+	+below(sm)
+		padding 60px 0
 			
 
 /*
@@ -1060,6 +1064,7 @@ img
 		
 	&-select
 		width 235px
+		margin-bottom 29px
 		
 	.btn-orange
 		max-width 235px
@@ -1068,7 +1073,7 @@ img
 	.select2-container--default .select2-selection--single
 		position relative
 		height 48px
-		margin-bottom 29px
+		// margin-bottom 29px
 		padding-left 24px
 		border none
 		background-color transparent

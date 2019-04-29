@@ -3,11 +3,29 @@
   svg4everybody();
 
   //header scroll to block
+  $(document).on("scroll", onScroll);
+
   $('a[href^="#"]').click(function(){
     var target = $(this).attr('href');
     $('html, body').animate({scrollTop: $(target).offset().top -182}, 500);
     return false;
   });
+
+  function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('.header-nav-link').each(function () {
+      var currLink = $(this);
+      var refElement = $(currLink.attr("href"));
+      if (refElement.position().top - 170 <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+        $('.header-nav-link').removeClass("active");
+        currLink.addClass("active");
+      }
+      else{
+        currLink.removeClass("active");
+      }
+    });
+  }
+
 
 
   // header mobile menu
