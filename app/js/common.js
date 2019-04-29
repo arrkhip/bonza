@@ -2,7 +2,15 @@
 
   svg4everybody();
 
-  // header
+  //header scroll to block
+  $('a[href^="#"]').click(function(){
+    var target = $(this).attr('href');
+    $('html, body').animate({scrollTop: $(target).offset().top -182}, 500);
+    return false;
+  });
+
+
+  // header mobile menu
   $('.js-header-switch').on('click', function() {
     $('.header-mobile-wrapper').slideToggle(350);
     $('.header-switch-icon').toggle();
