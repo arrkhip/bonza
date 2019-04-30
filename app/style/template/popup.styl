@@ -1,12 +1,17 @@
 .popup
+	position relative
 	display none
 	width 100%
 	height 100%
 	
 	&-inner
+		position absolute
+		top 50%
+		left 50%
 		max-width 523px
 		margin auto
 		text-align center
+		transform translate(-50%, -50%)
 	
 	&-form
 		max-width 369px
@@ -20,12 +25,17 @@
 		text-align center
 		color #474747
 		border-color orange
+		transition()
 		
 		+placeholder()
 			font-weight 500
 			font-family font-base
 			text-align center
 			color #474747
+			
+		&:focus
+			+placeholder()
+				color transparent
 	
 	.btn-orange
 		max-width 100%
